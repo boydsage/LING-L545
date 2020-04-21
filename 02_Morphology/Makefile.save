@@ -1,0 +1,22 @@
+all: grn.gen.hfst quc.gen.hfst arn.gen.hfst
+
+grn.lexc.hfst: grn.lexc
+	hfst-lexc grn.lexc -o grn.lexc.hfst
+grn.twol.hfst: grn.twol
+	hfst-twolc grn.twol -o grn.twol.hfst
+grn.gen.hfst: grn.lexc.hfst grn.twol.hfst
+	hfst-compose-intersect -1 grn.lexc.hfst -2 grn.twol.hfst -o grn.gen.hfst
+
+quc.lexc.hfst: quc.lexc
+	hfst-lexc quc.lexc -o quc.lexc.hfst
+quc.twol.hfst: grn.twol
+	hfst-twolc grn.twol -o grn.twol.hfst
+quc.gen.hfst: quc.lexc.hfst quc.twol.hfst
+	hfst-compose-intersect -1 quc.lexc.hfst -2 grn.twol.hfst$
+
+grn.lexc.hfst: arn.lexc
+        hfst-lexc arn.lexc -o grn.lexc.hfst
+grn.twol.hfst: grn.twol
+        hfst-twolc grn.twol -o grn.twol.hfst
+grn.gen.hfst: grn.lexc.hfst grn.twol.hfst
+        hfst-compose-intersect -1 grn.lexc.hfst -2 grn.twol.hfst -o grn.gen.hfst

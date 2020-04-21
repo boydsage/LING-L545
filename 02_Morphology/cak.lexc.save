@@ -1,0 +1,54 @@
+Multichar_Symbols
+
+%>			! morpheme boundary
+%<v%>			! verb
+%<tv%>			! transitive verb
+%<perf%>		! perfect tense
+%<o_sg1%>		! object singular: "me"
+%<o_sg2%>		! object singular: "you"
+%<o_sg3%>		! object singular: "him/her/it"
+%<o_pl1%>		! object plural: "us"
+%<o_pl2%>		! object plural: "you"
+%<o_pl3%>		! object plural: "them"
+%<s_sg1%>		! subject singular: "I"
+%<s_sg2%>		! subject singular: "you"
+%<s_sg3%>		! subject singular: "he/she/it"
+%<s_pl1%>		! subject plural: "we"
+%<s_pl2%>		! subject plural: "you"
+%<s_pl3%>		! subject plural: "they"
+
+
+LEXICON Root
+
+V ;
+
+
+LEXICON V
+
+%<v%>: TRANS ;
+
+
+LEXICON TRANS	
+
+%<tv%>: ASPECT
+
+
+LEXICON ASPECT
+
+%<perf%>:x OBJECT ;
+
+LEXICON OBJECT
+
+%<o_sg1%>               ! object singular: "me"
+%<o_sg2%>               ! object singular: "you"
+%<o_sg3%>               ! object singular: "him/her/it"
+%<o_pl1%>               ! object plural: "us"
+%<o_pl2%>_pl3%>  
+
+
+
+
+
+LEXICON VERBS
+
+tzʼät:tzʼät V ;

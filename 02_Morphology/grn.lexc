@@ -1,0 +1,94 @@
+Multichar_Symbols
+
+%>                   ! Frontera de morfema
+%<n%>                ! Nombre
+%<gen%>              ! Genitivo
+%<loc%>              ! Locativo
+%{m%}
+%<der_kue%>
+%<comp%>
+%<pl%>
+%{g%}
+%{n%}
+%<nom%>
+%{s%}
+%<num%>
+%{d%}
+
+LEXICON Root
+
+Nouns ;
+DIGITLEX ;
+
+LEXICON N
+
+%<n%>: PL ;  
+%<n%>: SUBST ;
+
+LEXICON N-SPA
+
+:%{s%} N ; 
+
+LEXICON SUBST
+
+%<der_kue%>:%>kue # "weight: 1.0" ;
+
+LEXICON PL
+
+CASE ;
+%<pl%>:%>%{n%}%{g%}uéra CASE ;
+
+LEXICON CASE
+
+%<gen%>:%>gui # ; ! "de"
+%<loc%>:%>%{m%}e # ; ! "a, en"
+%<comp%>:%>icha # ; !
+%<nom%>: # ; ! ""
+# ;
+
+LEXICON NUM-DIGIT
+
+%<num%>:%- CASE ;
+
+LEXICON LOOP
+
+LAST-DIGIT ;
+DIGITLEX ;
+
+LEXICON LAST-DIGIT
+
+1:1%{d%} NUM-DIGIT ; !"peteĩ"
+2:2 NUM-DIGIT ; !"mokõi"
+3:3 NUM-DIGIT ; !"mbohapy"
+4:4 NUM-DIGIT ; !"irundy"
+5:5 NUM-DIGIT ; !"po"
+6:6%{d%} NUM-DIGIT ; !"poteĩ"
+7:7 NUM-DIGIT ; !"pokõi"
+8:8 NUM-DIGIT ; !"poapy"
+9:9 NUM-DIGIT ; !"porundy"
+
+LEXICON DIGITLEX
+
+%0:%0 LOOP ;
+1:1   LOOP ;
+2:2   LOOP ;
+3:3   LOOP ;
+4:4   LOOP ;
+5:5   LOOP ;
+6:6   LOOP ;
+7:7   LOOP ;
+8:8   LOOP ;
+9:9   LOOP ;
+LAST-DIGIT;
+
+LEXICON Nouns
+
+ava:ava N ; ! "raza, gente"
+óga:óga N ; ! "casa"
+irũ:irũ N ; ! "amigo"
+asociación:asociación N-SPA ;
+declaración:declaración N-SPA ;
+apyka:apyka N ; ! "silla"
+tembiasa:tembiasa N ; ! "experiencia"
+tembiasakue:tembiasakue N ; ! "historia"
+akãvai:akãvai N ; ! "locura"
