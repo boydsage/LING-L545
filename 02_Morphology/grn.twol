@@ -1,4 +1,4 @@
-									Alphabet
+Alphabet
 
 A B Ã C D E Ẽ G G̃ H I Ĩ J K L M N Ñ O Õ P R S T U Ũ V W X Y Z Ỹ Á É Í Ó Ú Ý   F Q
 a b ã c d e ẽ g g̃ h i ĩ j k l m n ñ o õ p r s t u ũ v w x y z ỹ á é í ó ú ý ʼ f q
@@ -33,8 +33,6 @@ Rules
 	    except
             %{s%}: %>: _ ;
 
-"Remove morpheme boundary"
-%>:0 <=> _ ;
 
 "Change vowel to tonal before atonal suffix"
 Va:Vt <=> _ %>: [%{m%}: e: | i: c: h: a:] ;
