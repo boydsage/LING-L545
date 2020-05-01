@@ -1,0 +1,17 @@
+DELIMITERS = "." ;
+
+LIST DET = DET ;
+LIST PUNCT = PUNCT ;
+LIST VERB = VERB ;
+LIST NOM = Case=Nom ;
+LIST FIN = VerbForm=Fin ;
+LIST ADP = ADP ;
+LIST LOC = Case=Loc ;
+
+SECTION
+
+REMOVE DET IF (1C PUNCT) ; # remove determiner if punct after
+REMOVE DET IF (1C FIN) ;
+REMOVE DET IF (1C ADP) ; #
+REMOVE NOM IF (-1 ADP) ; # remove nom if previous preposition
+REMOVE LOC IF (NOT -1* ADP barrier PUNCT) ;
