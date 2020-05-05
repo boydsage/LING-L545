@@ -1,0 +1,12 @@
+UDPipe Evaluation Report
+========================
+
+There were three treebanks out of the ten with errors.
+
+Treebank 3 had three errors. Two of the errors were ascribing the wrong head within a series of nouns. Lines 6 and 13 ascribed the heads to the wrong noun. Line 6 ascribed "bias" to line 2 "experiences" instead of line 4 "descrimination" in the phrase "experiences of descrimination." Line 13 ascribed "social" to line 15 "research" instead of line 14 "science" in the phrase "sociel science research." Line 12 was a less common error type. It ascribed adverbial modifier to "much," instead of unspecified dependency.
+
+Threebank 9 had four errors. All errors related to ascribing the root to line 6 "lost" instead of line 14 "push." Setting the wrong verb as the root lead to the ascription in line 8 of "discussion" to line 14 instead of line 6, and as a nominal modifier instead of as a oblique. In line 27 "." was attributed to line 6 instead of 14 because of the switching of the root.
+
+Treebank 10 also had four errors. All errors related to ascribing to the wrong verb, the wrong noun, or a verb instead of a noun. The first error in line 20 ascribed "increasing" as an adverbial clause modifier to the verb "intended" in line 12 instead of "reduce" in line 14. Line 25 ascribed "regarding" to the noun "employees" in line 24 as a clausal modifier of a noun instead of "challenges" in line 27 as a case marking. Line 27 "challenges" was ascribed to the verb "regarding" as an object in line 25 instead of to the noun "awareness" in line 22 as nominal modifier. In line 29 "minority" was ascribed to line 31 "members" as a compound instead of "group" as a compound in line 30. It switched the head noun in the compound noun.
+
+The main error types involved ascribing to the wrong noun as a head in a phrase, the wrong verb as a head, and sometimes root of the sentence, or a verb instead of a noun.
